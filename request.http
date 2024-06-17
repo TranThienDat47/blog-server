@@ -1,0 +1,44 @@
+POST http://localhost:9000/api/user/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9obWhhaGEwMTIzQGdtYWlsLmNvbSIsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTcxODU5Mzc1NSwiZXhwIjoxNzE4NTkzNzY1fQ.OSPuAxeqe10dGcLwA6cy6nQMKyMrbGD3DTzbchx1dgI
+
+{
+    "firstName": "Trần Văn",
+    "lastName": "Đạt",
+    "email": "ohmhaha01111213@gmail.com",
+    "password": "123123",
+    "dateOfBirth": "2002-10-01",
+    "isAdmin": true,
+    "isVerify": true
+}
+
+###
+POST http://localhost:9000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "ohmhaha0123@gmail.com",
+    "password": "234234"
+}
+
+###
+GET http://localhost:9000/api/user/find?skip=0&limit=1&key=&sort=-1
+Content-Type: application/json
+
+{
+    "email": "ohmhaha0123@gmail.com",
+    "password": "123123"
+}
+
+###
+PUT http://localhost:9000/api/user/666eeddb659c9e40770de6eb
+Content-Type: application/json
+
+{
+    "firstName": "Trần 1",
+    "lastName": "Đạt",
+    "password": "234234",
+    "dateOfBirth": "2002-10-01",
+    "isAdmin": false,
+    "isVerify": false
+}
